@@ -21,40 +21,120 @@
     <!-- CSS propio del proyecto - va DESPUÉS de Bootstrap para que tenga prioridad -->
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <!-- header agrupa el logo, titulo principal y menú: es la parte superior del sitio -->
-    <header class="hero">
-<!-- Icono de pesa como simbolo de marca, queda nitido en cualquier tamaño -->
-<div class="logo-negocio" aria-label="Mashka Box">
-    <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-        <!-- Barra central -->
-        <line x1="14" y1="32" x2="50" y2="32"/>
-        <!-- Pesa izquierda -->
-        <rect x="6" y="22" width="6" height="20" rx="1.5"/>
-        <rect x="2" y="26" width="3" height="12" rx="1"/>
-        <!-- Pesa derecha -->
-        <rect x="52" y="22" width="6" height="20" rx="1.5"/>
-        <rect x="59" y="26" width="3" height="12" rx="1"/>
-    </svg>
-</div>
-        <!-- id permite que el enlace del menú pueda regresar a esta parte de la página -->
-        <h1 id="inicio">MASHKA</h1>
-        <h2 class="subtitulo-hero">TRAINING CLUB</h2>
-        <p class="frase-hero">Transforma tu cuerpo, eleva tu mente.</p>
 
-        <!-- nav agrupa los enlaces principales de navegación -->
-        <nav>
-        <!-- href con # lleva a una sección dentro de la misma página -->
-        <a href="#inicio">Inicio</a>
-        <a href="#nosotros">Sobre nosotros</a>
-        <a href="#galeria">Galeria</a>
-        <a href="#beneficios">Beneficios</a>
-        <a href="#planes">Planes</a>
-        <a href="#horarios">Horarios</a>
-        <a href="#multimedia">Multimedia</a>
-        <a href="#ubicacion">Ubicacion</a>
-        <a href="#contacto">Contacto</a>
+<body class="bg-dark text-white">
+    <!-- NAVBAR 100% Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-warning sticky-top" id="inicio">
+        <div class="container">
+
+            <!-- Logo + Nombre -->
+            <a class="navbar-brand d-flex align-items-center gap-2 fw-bold text-warning" href="#inicio">
+                <svg width="30" height="30" viewBox="0 0 64 64" fill="none"
+                     stroke="currentColor" stroke-width="3"
+                     stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="14" y1="32" x2="50" y2="32"/>
+                    <rect x="6"  y="22" width="6"  height="20" rx="1.5"/>
+                    <rect x="2"  y="26" width="3"  height="12" rx="1"/>
+                    <rect x="52" y="22" width="6"  height="20" rx="1.5"/>
+                    <rect x="59" y="26" width="3"  height="12" rx="1"/>
+                </svg>
+                MASHKA <span class="text-white">BOX</span>
+            </a>
+
+            <!-- Botón hamburguesa móvil -->
+            <button class="navbar-toggler border-warning" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarMashka"
+                    aria-controls="navbarMashka"
+                    aria-expanded="false"
+                    aria-label="Abrir menú">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Links colapsables -->
+            <div class="collapse navbar-collapse" id="navbarMashka">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-1">
+                    <li class="nav-item"><a class="nav-link active text-warning" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#nosotros">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#galeria">Galería</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#beneficios">Beneficios</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#planes">Planes</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#horarios">Horarios</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#multimedia">Multimedia</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#ubicacion">Ubicación</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#contacto">Contacto</a></li>
+                </ul>
+
+                <!-- Botón CTA -->
+                <a href="#planes" class="btn btn-warning text-dark fw-bold ms-lg-2">
+                    Ver Planes
+                </a>
+            </div>
+        </div>
     </nav>
+
+
+    <!-- HERO 100% Bootstrap -->
+    <header class="bg-dark text-white py-5">
+        <div class="container py-5 text-center">
+
+            <!-- Badge superior -->
+            <span class="badge bg-warning text-dark fs-6 mb-4 px-3 py-2">
+                ⚡ Latacunga, Ecuador
+            </span>
+
+            <!-- Título principal -->
+            <h1 class="display-1 fw-bold text-uppercase mb-0">
+                MASHKA
+            </h1>
+            <h1 class="display-1 fw-bold text-uppercase text-warning mb-2">
+                BOX
+            </h1>
+
+            <!-- Subtítulo -->
+            <p class="fs-4 fw-light text-secondary text-uppercase letter-spacing mb-3">
+                Training Club
+            </p>
+
+            <!-- Frase motivacional -->
+            <p class="lead text-secondary fst-italic mb-5 mx-auto" style="max-width:520px">
+                Transforma tu cuerpo, eleva tu mente. Entrenamiento funcional para personas que van en serio.
+            </p>
+
+            <!-- Botones CTA -->
+            <div class="d-flex justify-content-center flex-wrap gap-3 mb-5">
+                <a href="#planes" class="btn btn-warning btn-lg text-dark fw-bold px-4">
+                    Empezar ahora →
+                </a>
+                <a href="#nosotros" class="btn btn-outline-light btn-lg px-4">
+                    Conocer más
+                </a>
+            </div>
+
+            <!-- Divisor -->
+            <hr class="border-secondary w-50 mx-auto mb-4">
+
+            <!-- Stats rápidos -->
+            <div class="row justify-content-center g-4 text-center">
+                <div class="col-6 col-md-3">
+                    <p class="display-6 fw-bold text-warning mb-0">5+</p>
+                    <p class="text-secondary small text-uppercase mb-0">Horarios diarios</p>
+                </div>
+                <div class="col-6 col-md-3">
+                    <p class="display-6 fw-bold text-warning mb-0">$30</p>
+                    <p class="text-secondary small text-uppercase mb-0">Desde</p>
+                </div>
+                <div class="col-6 col-md-3">
+                    <p class="display-6 fw-bold text-warning mb-0">100%</p>
+                    <p class="text-secondary small text-uppercase mb-0">Funcional</p>
+                </div>
+                <div class="col-6 col-md-3">
+                    <p class="display-6 fw-bold text-warning mb-0">L–V</p>
+                    <p class="text-secondary small text-uppercase mb-0">Disponible</p>
+                </div>
+            </div>
+
+        </div>
     </header>
 
     <!-- Línea horizontal para separar visualmente las secciones -->
@@ -858,6 +938,7 @@
             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
         </svg>
     </a>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
