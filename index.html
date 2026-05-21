@@ -15,10 +15,12 @@
     <!-- Nombre que aparece en la pestaña del navegador -->
     <title>Mashka Box - Training Club</title>
 
-    <!-- Conecta este archivo HTML con el archivo de estilos CSS -->
+    <!-- Bootstrap CSS (CDN) - se carga ANTES del CSS propio para poder sobreescribir estilos -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS propio del proyecto - va DESPUÉS de Bootstrap para que tenga prioridad -->
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
     <!-- header agrupa el logo, titulo principal y menú: es la parte superior del sitio -->
     <header class="hero">
