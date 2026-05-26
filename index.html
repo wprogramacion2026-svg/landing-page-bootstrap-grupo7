@@ -8,38 +8,125 @@
 
     <title>Mashka Box - Training Club</title>
 
+    <!-- Bootstrap CSS (CDN) - se carga ANTES del CSS propio para poder sobreescribir estilos -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
-    <header class="hero">
-        <div class="logo-negocio" aria-label="Mashka Box">
-            <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="14" y1="32" x2="50" y2="32"/>
-                <rect x="6" y="22" width="6" height="20" rx="1.5"/>
-                <rect x="2" y="26" width="3" height="12" rx="1"/>
-                <rect x="52" y="22" width="6" height="20" rx="1.5"/>
-                <rect x="59" y="26" width="3" height="12" rx="1"/>
-            </svg>
-        </div>
-        <h1 id="inicio">MASHKA</h1>
-        <h2 class="subtitulo-hero">TRAINING CLUB</h2>
-        <p class="frase-hero">Transforma tu cuerpo, eleva tu mente.</p>
+<body class="bg-dark text-white">
+    <!-- NAVBAR 100% Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-warning sticky-top">
+        <div class="container">
 
-        <nav>
-            <a href="#inicio">Inicio</a>
-            <a href="#nosotros">Sobre nosotros</a>
-            <a href="#galeria">Galeria</a>
-            <a href="#servicios-bootstrap">Servicios</a>
-            <a href="#beneficios">Beneficios</a>
-            <a href="#planes">Planes</a>
-            <a href="#horarios">Horarios</a>
-            <a href="#multimedia">Multimedia</a>
-            <a href="#ubicacion">Ubicacion</a>
-            <a href="#contacto">Contacto</a>
-        </nav>
+            <!-- Logo + Nombre -->
+            <a class="navbar-brand d-flex align-items-center gap-2 fw-bold text-warning" href="#inicio">
+                <svg width="30" height="30" viewBox="0 0 64 64" fill="none"
+                     stroke="currentColor" stroke-width="3"
+                     stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="14" y1="32" x2="50" y2="32"/>
+                    <rect x="6"  y="22" width="6"  height="20" rx="1.5"/>
+                    <rect x="2"  y="26" width="3"  height="12" rx="1"/>
+                    <rect x="52" y="22" width="6"  height="20" rx="1.5"/>
+                    <rect x="59" y="26" width="3"  height="12" rx="1"/>
+                </svg>
+                MASHKA <span class="text-white">BOX</span>
+            </a>
+
+            <!-- Botón hamburguesa móvil -->
+            <button class="navbar-toggler border-warning" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarMashka"
+                    aria-controls="navbarMashka"
+                    aria-expanded="false"
+                    aria-label="Abrir menú">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Links colapsables -->
+            <div class="collapse navbar-collapse" id="navbarMashka">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-1">
+                    <li class="nav-item"><a class="nav-link active text-warning" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#nosotros">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#galeria">Galería</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#beneficios">Beneficios</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#planes">Planes</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#horarios">Horarios</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#multimedia">Multimedia</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#ubicacion">Ubicación</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#contacto">Contacto</a></li>
+                </ul>
+
+                <!-- Botón CTA -->
+                <a href="#planes" class="btn btn-warning text-dark fw-bold ms-lg-2">
+                    Ver Planes
+                </a>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- HERO 100% Bootstrap -->
+    
+    <header class="bg-dark text-white py-5" id="inicio">
+        <div class="container py-5 text-center">
+
+            <!-- Badge superior -->
+            <span class="badge bg-warning text-dark fs-6 mb-4 px-3 py-2">
+                ⚡ Latacunga, Ecuador
+            </span>
+
+            <!-- Título principal -->
+            <h1 class="display-1 fw-bold text-uppercase mb-0">
+                MASHKA
+            </h1>
+            <h1 class="display-1 fw-bold text-uppercase text-warning mb-2">
+                BOX
+            </h1>
+
+            <!-- Subtítulo -->
+            <p class="fs-4 fw-light text-secondary text-uppercase letter-spacing mb-3">
+                Training Club
+            </p>
+
+            <!-- Frase motivacional -->
+            <p class="lead text-secondary fst-italic mb-5 mx-auto" style="max-width:520px">
+                Transforma tu cuerpo, eleva tu mente. Entrenamiento funcional para personas que van en serio.
+            </p>
+
+            <!-- Botones CTA -->
+            <div class="d-flex justify-content-center flex-wrap gap-3 mb-5">
+                <a href="#planes" class="btn btn-warning btn-lg text-dark fw-bold px-4">
+                    Empezar ahora →
+                </a>
+                <a href="#nosotros" class="btn btn-outline-light btn-lg px-4">
+                    Conocer más
+                </a>
+            </div>
+
+            <!-- Divisor -->
+            <hr class="border-secondary w-50 mx-auto mb-4">
+
+            <!-- Stats rápidos -->
+            <div class="row justify-content-center g-4 text-center">
+                <div class="col-6 col-md-3">
+                    <p class="display-6 fw-bold text-warning mb-0">5+</p>
+                    <p class="text-secondary small text-uppercase mb-0">Horarios diarios</p>
+                </div>
+                <div class="col-6 col-md-3">
+                    <p class="display-6 fw-bold text-warning mb-0">$30</p>
+                    <p class="text-secondary small text-uppercase mb-0">Desde</p>
+                </div>
+                <div class="col-6 col-md-3">
+                    <p class="display-6 fw-bold text-warning mb-0">100%</p>
+                    <p class="text-secondary small text-uppercase mb-0">Funcional</p>
+                </div>
+                <div class="col-6 col-md-3">
+                    <p class="display-6 fw-bold text-warning mb-0">L–V</p>
+                    <p class="text-secondary small text-uppercase mb-0">Disponible</p>
+                </div>
+            </div>
+
+        </div>
     </header>
 
     <section class="nosotros" id="nosotros">
