@@ -622,153 +622,128 @@
         </div>
     </section>
 
-    <!-- Formulario de contacto: estilo premium con campos obligatorios -->
-    <section class="contacto-section" id="contacto">
-        <div class="contacto-container">
-            <!-- Lado izquierdo: copy motivacional -->
-            <div class="contacto-info">
-                <span class="seccion-tag">Empieza hoy</span>
-                <h2 class="contacto-titulo">Da el <span class="amarillo">primer paso</span></h2>
-                <p class="contacto-sub">
-                    Déjanos tus datos y nos comunicaremos contigo para guiarte
-                    al plan que mejor se adapte a tus objetivos.
-                </p>
+    <!-- Formulario de contacto - Bootstrap form-control + grid responsive -->
+    <section class="contacto-section py-5" id="contacto">
+        <div class="container">
+            <div class="row g-5 align-items-start">
+                <!-- Lado izquierdo: copy motivacional -->
+                <div class="col-12 col-lg-5">
+                    <span class="badge bg-warning-subtle text-warning-emphasis rounded-pill px-3 py-2 mb-3">Empieza hoy</span>
+                    <h2 class="display-5 fw-bold mb-3">Da el <span class="text-warning">primer paso</span></h2>
+                    <p class="lead text-secondary mb-4">
+                        Déjanos tus datos y nos comunicaremos contigo para guiarte
+                        al plan que mejor se adapte a tus objetivos.
+                    </p>
 
-                <div class="contacto-puntos">
-                    <div class="contacto-punto">
-                        <div class="contacto-punto-icono">
-                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                <polyline points="20 6 9 17 4 12"/>
-                            </svg>
+                    <div class="d-flex flex-column gap-3">
+                        <div class="d-flex align-items-start gap-3">
+                            <span class="badge bg-warning text-dark fs-5 rounded-circle d-inline-flex align-items-center justify-content-center flex-shrink-0" style="width:44px;height:44px;">
+                                <i class="bi bi-check2"></i>
+                            </span>
+                            <div>
+                                <strong class="d-block">Sin compromiso</strong>
+                                <span class="text-secondary small">Te informamos sin presión. Tú decides cuándo empezar.</span>
+                            </div>
                         </div>
-                        <div>
-                            <strong>Sin compromiso</strong>
-                            <p>Te informamos sin presión. Tú decides cuándo empezar.</p>
+                        <div class="d-flex align-items-start gap-3">
+                            <span class="badge bg-warning text-dark fs-5 rounded-circle d-inline-flex align-items-center justify-content-center flex-shrink-0" style="width:44px;height:44px;">
+                                <i class="bi bi-clock"></i>
+                            </span>
+                            <div>
+                                <strong class="d-block">Respuesta en 24 horas</strong>
+                                <span class="text-secondary small">Recibirás una respuesta personalizada de nuestro equipo.</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="contacto-punto">
-                        <div class="contacto-punto-icono">
-                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="12" cy="12" r="10"/>
-                                <polyline points="12 6 12 12 16 14"/>
-                            </svg>
-                        </div>
-                        <div>
-                            <strong>Respuesta en 24 horas</strong>
-                            <p>Recibirás una respuesta personalizada de nuestro equipo.</p>
-                        </div>
-                    </div>
-                    <div class="contacto-punto">
-                        <div class="contacto-punto-icono">
-                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2z"/>
-                            </svg>
-                        </div>
-                        <div>
-                            <strong>Primera clase de prueba</strong>
-                            <p>Ven a conocer el box antes de elegir tu plan.</p>
+                        <div class="d-flex align-items-start gap-3">
+                            <span class="badge bg-warning text-dark fs-5 rounded-circle d-inline-flex align-items-center justify-content-center flex-shrink-0" style="width:44px;height:44px;">
+                                <i class="bi bi-star-fill"></i>
+                            </span>
+                            <div>
+                                <strong class="d-block">Primera clase de prueba</strong>
+                                <span class="text-secondary small">Ven a conocer el box antes de elegir tu plan.</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Lado derecho: el formulario -->
-            <div class="contacto-form-wrapper">
-                <form class="contacto-form" method="POST" action="registrar.php" novalidate>
-                    <h3 class="contacto-form-titulo">Cuéntanos sobre ti</h3>
-                    <p class="contacto-form-sub">Los campos con <span class="obligatorio">*</span> son obligatorios.</p>
+                <!-- Lado derecho: el formulario -->
+                <div class="col-12 col-lg-7">
+                    <div class="card shadow-lg border-0 rounded-4">
+                        <div class="card-body p-4 p-md-5">
+                            <form method="POST" action="registrar.php" novalidate class="needs-validation">
+                                <h3 class="h4 fw-bold mb-1">Cuéntanos sobre ti</h3>
+                                <p class="text-secondary small mb-4">Los campos con <span class="text-danger">*</span> son obligatorios.</p>
 
-                    <!-- Nombre - obligatorio -->
-                    <div class="form-grupo">
-                        <label for="nombre">Nombre completo <span class="obligatorio">*</span></label>
-                        <input 
-                            type="text" 
-                            id="nombre" 
-                            name="nombre" 
-                            placeholder="Ej. María González"
-                            required
-                            minlength="3"
-                            maxlength="80">
-                    </div>
+                                <!-- Nombre -->
+                                <div class="mb-3">
+                                    <label for="nombre" class="form-label fw-semibold">Nombre completo <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control form-control-lg" id="nombre" name="nombre"
+                                           placeholder="Ej. María González" required minlength="3" maxlength="80">
+                                </div>
 
-                    <!-- Correo - opcional -->
-                    <div class="form-grupo">
-                        <label for="correo">Correo electrónico</label>
-                        <input 
-                            type="email" 
-                            id="correo" 
-                            name="correo" 
-                            placeholder="tu@correo.com"
-                            maxlength="100">
-                    </div>
+                                <!-- Correo -->
+                                <div class="mb-3">
+                                    <label for="correo" class="form-label fw-semibold">Correo electrónico</label>
+                                    <input type="email" class="form-control form-control-lg" id="correo" name="correo"
+                                           placeholder="tu@correo.com" maxlength="100">
+                                </div>
 
-                    <!-- Telefono - obligatorio -->
-                    <div class="form-grupo">
-                        <label for="telefono">Teléfono <span class="obligatorio">*</span></label>
-                        <input 
-                            type="tel" 
-                            id="telefono" 
-                            name="telefono" 
-                            placeholder="Ej. 0983421877"
-                            required
-                            pattern="[0-9]{10}"
-                            title="10 dígitos, sin espacios ni guiones"
-                            maxlength="10">
-                    </div>
+                                <!-- Telefono -->
+                                <div class="mb-3">
+                                    <label for="telefono" class="form-label fw-semibold">Teléfono <span class="text-danger">*</span></label>
+                                    <input type="tel" class="form-control form-control-lg" id="telefono" name="telefono"
+                                           placeholder="Ej. 0983421877" required pattern="[0-9]{10}"
+                                           title="10 dígitos, sin espacios ni guiones" maxlength="10">
+                                </div>
 
-                    <!-- Fila de 2 columnas: objetivo + horario -->
-                    <div class="form-fila">
-                        <!-- Objetivo - obligatorio -->
-                        <div class="form-grupo">
-                            <label for="objetivo">Objetivo <span class="obligatorio">*</span></label>
-                            <select id="objetivo" name="objetivo" required>
-                                <option value="" disabled selected>Selecciona...</option>
-                                <option value="Bajar de peso">Bajar de peso</option>
-                                <option value="Ganar fuerza">Ganar fuerza</option>
-                                <option value="Mejorar condicion fisica">Mejorar mi condición</option>
-                                <option value="Empezar desde cero">Empezar desde cero</option>
-                                <option value="Entrenar por salud">Entrenar por salud</option>
-                            </select>
+                                <!-- Fila objetivo + horario -->
+                                <div class="row g-3 mb-3">
+                                    <div class="col-12 col-md-6">
+                                        <label for="objetivo" class="form-label fw-semibold">Objetivo <span class="text-danger">*</span></label>
+                                        <select class="form-select form-select-lg" id="objetivo" name="objetivo" required>
+                                            <option value="" disabled selected>Selecciona...</option>
+                                            <option value="Bajar de peso">Bajar de peso</option>
+                                            <option value="Ganar fuerza">Ganar fuerza</option>
+                                            <option value="Mejorar condicion fisica">Mejorar mi condición</option>
+                                            <option value="Empezar desde cero">Empezar desde cero</option>
+                                            <option value="Entrenar por salud">Entrenar por salud</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <label for="horario" class="form-label fw-semibold">Horario preferido</label>
+                                        <select class="form-select form-select-lg" id="horario" name="horario">
+                                            <option value="" disabled selected>Cualquier momento</option>
+                                            <option value="Manana">Mañana (5-8 AM)</option>
+                                            <option value="Tarde">Tarde (4-6 PM)</option>
+                                            <option value="Noche">Noche (7-8 PM)</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <!-- Plan -->
+                                <div class="mb-4">
+                                    <label for="plan" class="form-label fw-semibold">Plan de interés <span class="text-danger">*</span></label>
+                                    <select class="form-select form-select-lg" id="plan" name="plan" required>
+                                        <option value="" disabled selected>Selecciona un plan...</option>
+                                        <option value="Plan grupal">Plan Grupal ($30 / persona)</option>
+                                        <option value="Plan estudiantes">Plan Estudiantes ($30 / mes)</option>
+                                        <option value="Plan mensual">Plan Mensual ($35 / mes) ★</option>
+                                        <option value="Plan trimestral">Plan Trimestral ($95)</option>
+                                        <option value="Plan semestral">Plan Semestral ($180)</option>
+                                    </select>
+                                </div>
+
+                                <button type="submit" class="btn btn-warning btn-lg w-100 fw-bold d-inline-flex align-items-center justify-content-center gap-2">
+                                    Quiero empezar <i class="bi bi-arrow-right"></i>
+                                </button>
+
+                                <p class="text-center text-secondary small mt-3 mb-0">
+                                    Al enviar aceptas que te contactemos por teléfono o WhatsApp.
+                                </p>
+                            </form>
                         </div>
-
-                        <!-- Horario - opcional -->
-                        <div class="form-grupo">
-                            <label for="horario">Horario preferido</label>
-                            <select id="horario" name="horario">
-                                <option value="" disabled selected>Cualquier momento</option>
-                                <option value="Manana">Mañana (5-8 AM)</option>
-                                <option value="Tarde">Tarde (4-6 PM)</option>
-                                <option value="Noche">Noche (7-8 PM)</option>
-                            </select>
-                        </div>
                     </div>
-
-                    <!-- Plan - obligatorio -->
-                    <div class="form-grupo">
-                        <label for="plan">Plan de interés <span class="obligatorio">*</span></label>
-                        <select id="plan" name="plan" required>
-                            <option value="" disabled selected>Selecciona un plan...</option>
-                            <option value="Plan grupal">Plan Grupal ($30 / persona)</option>
-                            <option value="Plan estudiantes">Plan Estudiantes ($30 / mes)</option>
-                            <option value="Plan mensual">Plan Mensual ($35 / mes) ★</option>
-                            <option value="Plan trimestral">Plan Trimestral ($95)</option>
-                            <option value="Plan semestral">Plan Semestral ($180)</option>
-                        </select>
-                    </div>
-
-                    <!-- Boton de envio -->
-                    <button type="submit" class="form-btn">
-                        <span>Quiero empezar</span>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                            <line x1="5" y1="12" x2="19" y2="12"/>
-                            <polyline points="12 5 19 12 12 19"/>
-                        </svg>
-                    </button>
-
-                    <p class="form-aviso">
-                        Al enviar aceptas que te contactemos por teléfono o WhatsApp.
-                    </p>
-                </form>
+                </div>
             </div>
         </div>
     </section>
