@@ -1,18 +1,11 @@
 <!DOCTYPE html>
-<html lang="es"> <!-- Indica que el idioma principal de la página es español -->
-
-<head>
-    <!-- Permite usar caracteres especiales como tildes y la letra ñ -->
+<html lang="es"> <head>
     <meta charset="UTF-8">
 
-    <!-- CRÍTICO: hace que la página se adapte al ancho real del dispositivo -->
-    <!-- Sin esto, los celulares fingen ser de 980px y encogen todo -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Descripción para SEO (Google) y para cuando se comparte el link -->
     <meta name="description" content="Mashka Box Training Club - Gimnasio de entrenamiento funcional en Latacunga, Ecuador">
 
-    <!-- Nombre que aparece en la pestaña del navegador -->
     <title>Mashka Box - Training Club</title>
 
     <!-- Bootstrap CSS (CDN) - se carga ANTES del CSS propio para poder sobreescribir estilos -->
@@ -136,11 +129,8 @@
         </div>
     </header>
 
-    <!-- Línea horizontal para separar visualmente las secciones -->
-  <!-- Seccion combinada: bienvenida + sobre nosotros con stats e imagen -->
     <section class="nosotros" id="nosotros">
         <div class="nosotros-grid">
-            <!-- Lado izquierdo: texto e info -->
             <div class="nosotros-texto">
                 <span class="seccion-tag">Quiénes somos</span>
                 <h2 class="nosotros-titulo">Más que un gimnasio,<br><span class="amarillo">una tribu.</span></h2>
@@ -153,7 +143,6 @@
                     cambio físico. Aquí no entrenas solo: te empuja una comunidad.
                 </p>
 
-                <!-- Stats: 3 valores genericos que definen la marca -->
                 <div class="stats">
                     <div class="stat">
                         <div class="stat-icono">
@@ -189,10 +178,8 @@
                 </div>
             </div>
 
-            <!-- Lado derecho: imagen del local -->
             <div class="nosotros-imagen">
                 <img src="Imagenes/logo1.jpeg" alt="Entrenamiento en Mashka Box">
-                <!-- Badge flotante decorativo sobre la imagen -->
                 <div class="imagen-badge">
                     <strong>Latacunga</strong>
                     <span>Av. Unidad Nacional</span>
@@ -201,7 +188,6 @@
         </div>
     </section>
 
-    <!-- Galeria estilo masonry: cuadricula asimetrica que ocupa todo el ancho -->
     <section class="galeria-section" id="galeria">
         <div class="galeria-header">
             <span class="seccion-tag">Nuestro espacio</span>
@@ -209,10 +195,6 @@
             <p class="galeria-sub">Equipamiento profesional, ambiente motivador y una comunidad que entrena fuerte.</p>
         </div>
 
-        <!-- 
-            Grid de 6 imagenes. La primera ocupa 2 filas para crear ritmo visual.
-            Cada item tiene un overlay que aparece al pasar el mouse encima.
-        -->
         <div class="galeria-grid">
             <figure class="galeria-item galeria-grande">
                 <img src="Imagenes/entrenamiento1.jpeg" alt="Equipamiento de Mashka Box">
@@ -260,7 +242,52 @@
     </section>
     <hr>
 
-    <!-- Beneficios: 4 tarjetas con iconos SVG, hover con glow -->
+
+    <section class="container py-5" id="servicios-bootstrap">
+        <div class="text-center mb-5">
+            <span class="seccion-tag">Programas Principales</span>
+            <h2 class="display-5 fw-bold text-white mt-2">Entrenamiento <span style="color: #ffc107;">de alto nivel</span></h2>
+            <p class="lead text-white-50">Distribución con sistema de grillas (Bootstrap) para resultados óptimos.</p>
+        </div>
+        
+        <div class="row g-4">
+            
+            <div class="col-12 col-md-4">
+                <div class="card h-100 bg-dark text-white shadow" style="border: 1px solid #333;">
+                    <img src="Imagenes/entrenamiento5.jpg" class="card-img-top" alt="Musculación" style="height: 250px; object-fit: cover;">
+                    <div class="card-body d-flex flex-column text-center">
+                        <h4 class="card-title fw-bold" style="color: #ffc107;">Musculación</h4>
+                        <p class="card-text text-light mb-4">Equipamiento de pesas libres para maximizar tu ganancia muscular y fuerza. Entrenamiento estructurado.</p>
+                        <a href="#planes" class="btn btn-warning mt-auto fw-bold">Ver Planes</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+                <div class="card h-100 bg-dark text-white shadow" style="border: 1px solid #333;">
+                    <img src="Imagenes/entrenamiento6.jpg" class="card-img-top" alt="Entrenamiento Funcional" style="height: 250px; object-fit: cover;">
+                    <div class="card-body d-flex flex-column text-center">
+                        <h4 class="card-title fw-bold" style="color: #ffc107;">Funcional</h4>
+                        <p class="card-text text-light mb-4">Circuitos dinámicos diseñados para mejorar tu resistencia, movilidad y agilidad física en el día a día.</p>
+                        <a href="#planes" class="btn btn-warning mt-auto fw-bold">Ver Planes</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+                <div class="card h-100 bg-dark text-white shadow" style="border: 1px solid #333;">
+                    <img src="Imagenes/entrenamiento2.jpeg" class="card-img-top" alt="Zona de Cardio" style="height: 250px; object-fit: cover;">
+                    <div class="card-body d-flex flex-column text-center">
+                        <h4 class="card-title fw-bold" style="color: #ffc107;">Cardio HIIT</h4>
+                        <p class="card-text text-light mb-4">Entrenamientos de alta intensidad para optimizar tu acondicionamiento cardiovascular rápidamente.</p>
+                        <a href="#planes" class="btn btn-warning mt-auto fw-bold">Ver Planes</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <hr>
     <section class="beneficios-section" id="beneficios">
         <div class="beneficios-header">
             <span class="seccion-tag">Por qué elegirnos</span>
@@ -320,7 +347,6 @@
     </section>
     <hr>
 
-   <!-- Planes: 5 tarjetas con precio, beneficios y CTA -->
     <section class="planes-section" id="planes">
         <div class="planes-header">
             <span class="seccion-tag">Membresías</span>
@@ -430,7 +456,6 @@
 
     <hr>
 
-    <!-- Tabla de comparacion rediseñada -->
     <section class="comparacion-section">
         <div class="comparacion-header">
             <span class="seccion-tag">Comparativa</span>
@@ -480,7 +505,6 @@
 
     <hr>
 
-    <!-- Horarios: dos columnas (mañana / tarde-noche) lado a lado -->
     <section class="horarios-section" id="horarios">
         <div class="horarios-header">
             <span class="seccion-tag">Lunes a Viernes</span>
@@ -489,7 +513,6 @@
         </div>
 
         <div class="horarios-grid">
-            <!-- Bloque mañana -->
             <article class="horario-bloque horario-manana">
                 <div class="horario-bloque-header">
                     <div class="horario-icono">
@@ -518,7 +541,6 @@
                 </ul>
             </article>
 
-            <!-- Bloque tarde/noche -->
             <article class="horario-bloque horario-tarde">
                 <div class="horario-bloque-header">
                     <div class="horario-icono">
@@ -543,7 +565,6 @@
     </section>
     <hr>
 
-<!-- Multimedia: video con look mas integrado -->
     <section class="multimedia-section" id="multimedia">
         <div class="multimedia-header">
             <span class="seccion-tag">En acción</span>
@@ -557,10 +578,9 @@
             </video>
         </div>
     </section>
-<!-- Seccion WhatsApp Directo: contacto rapido con mockup de telefono -->
+
     <section class="whatsapp-section">
         <div class="whatsapp-container">
-            <!-- Lado izquierdo: info y CTA -->
             <div class="whatsapp-info">
                 <span class="seccion-tag whatsapp-tag">Contacto Directo</span>
                 <h2 class="whatsapp-titulo">Escríbenos por <span class="verde-wa">WhatsApp</span></h2>
@@ -593,7 +613,6 @@
                 <p class="wa-numero">098 342 1877</p>
             </div>
 
-            <!-- Lado derecho: mockup de telefono con conversacion -->
             <div class="whatsapp-visual">
                 <div class="phone-mockup">
                     <div class="phone-header">
@@ -631,7 +650,7 @@
             </div>
         </div>
     </section>
-    <!-- Ubicacion: layout 2 columnas estilo DAFEC con info + mapa -->
+
     <section class="ubicacion-section" id="ubicacion">
         <div class="ubicacion-container">
             <div class="ubicacion-info">
@@ -640,7 +659,6 @@
                 <p class="ubicacion-sub">Te esperamos en el box para conocerte y ayudarte a empezar.</p>
 
                 <div class="ubicacion-detalles">
-                    <!-- Direccion -->
                     <div class="ubicacion-item">
                         <span class="ubicacion-icono">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -654,7 +672,6 @@
                         </div>
                     </div>
 
-                    <!-- Telefono -->
                     <div class="ubicacion-item">
                         <span class="ubicacion-icono">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -667,7 +684,6 @@
                         </div>
                     </div>
 
-                    <!-- Horario -->
                     <div class="ubicacion-item">
                         <span class="ubicacion-icono">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -681,7 +697,6 @@
                         </div>
                     </div>
 
-                    <!-- WhatsApp -->
                     <div class="ubicacion-item">
                         <span class="ubicacion-icono ubicacion-icono-wa">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -696,7 +711,6 @@
                 </div>
             </div>
 
-            <!-- Mapa -->
             <div class="ubicacion-mapa">
                 <iframe 
                     src="https://www.google.com/maps?q=-0.9452842,-78.6113165&z=17&output=embed"
@@ -708,10 +722,8 @@
         </div>
     </section>
 
-    <!-- Formulario de contacto: estilo premium con campos obligatorios -->
     <section class="contacto-section" id="contacto">
         <div class="contacto-container">
-            <!-- Lado izquierdo: copy motivacional -->
             <div class="contacto-info">
                 <span class="seccion-tag">Empieza hoy</span>
                 <h2 class="contacto-titulo">Da el <span class="amarillo">primer paso</span></h2>
@@ -758,53 +770,27 @@
                 </div>
             </div>
 
-            <!-- Lado derecho: el formulario -->
             <div class="contacto-form-wrapper">
                 <form class="contacto-form" method="POST" action="registrar.php" novalidate>
                     <h3 class="contacto-form-titulo">Cuéntanos sobre ti</h3>
                     <p class="contacto-form-sub">Los campos con <span class="obligatorio">*</span> son obligatorios.</p>
 
-                    <!-- Nombre - obligatorio -->
                     <div class="form-grupo">
                         <label for="nombre">Nombre completo <span class="obligatorio">*</span></label>
-                        <input 
-                            type="text" 
-                            id="nombre" 
-                            name="nombre" 
-                            placeholder="Ej. María González"
-                            required
-                            minlength="3"
-                            maxlength="80">
+                        <input type="text" id="nombre" name="nombre" placeholder="Ej. María González" required minlength="3" maxlength="80">
                     </div>
 
-                    <!-- Correo - opcional -->
                     <div class="form-grupo">
                         <label for="correo">Correo electrónico</label>
-                        <input 
-                            type="email" 
-                            id="correo" 
-                            name="correo" 
-                            placeholder="tu@correo.com"
-                            maxlength="100">
+                        <input type="email" id="correo" name="correo" placeholder="tu@correo.com" maxlength="100">
                     </div>
 
-                    <!-- Telefono - obligatorio -->
                     <div class="form-grupo">
                         <label for="telefono">Teléfono <span class="obligatorio">*</span></label>
-                        <input 
-                            type="tel" 
-                            id="telefono" 
-                            name="telefono" 
-                            placeholder="Ej. 0983421877"
-                            required
-                            pattern="[0-9]{10}"
-                            title="10 dígitos, sin espacios ni guiones"
-                            maxlength="10">
+                        <input type="tel" id="telefono" name="telefono" placeholder="Ej. 0983421877" required pattern="[0-9]{10}" title="10 dígitos, sin espacios ni guiones" maxlength="10">
                     </div>
 
-                    <!-- Fila de 2 columnas: objetivo + horario -->
                     <div class="form-fila">
-                        <!-- Objetivo - obligatorio -->
                         <div class="form-grupo">
                             <label for="objetivo">Objetivo <span class="obligatorio">*</span></label>
                             <select id="objetivo" name="objetivo" required>
@@ -817,7 +803,6 @@
                             </select>
                         </div>
 
-                        <!-- Horario - opcional -->
                         <div class="form-grupo">
                             <label for="horario">Horario preferido</label>
                             <select id="horario" name="horario">
@@ -829,7 +814,6 @@
                         </div>
                     </div>
 
-                    <!-- Plan - obligatorio -->
                     <div class="form-grupo">
                         <label for="plan">Plan de interés <span class="obligatorio">*</span></label>
                         <select id="plan" name="plan" required>
@@ -842,7 +826,6 @@
                         </select>
                     </div>
 
-                    <!-- Boton de envio -->
                     <button type="submit" class="form-btn">
                         <span>Quiero empezar</span>
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -860,11 +843,9 @@
     </section>
     <hr>
 
-   <!-- Footer con redes sociales y links -->
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-grid">
-                <!-- Columna marca + descripcion + redes -->
                 <div class="footer-marca">
                     <div class="footer-logo">
                         <svg width="40" height="40" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
@@ -879,7 +860,6 @@
                     <p class="footer-desc">
                         Más que un gimnasio, una tribu. Entrenamiento funcional, comunidad real y resultados que se sienten.
                     </p>
-                    <!-- Botones de redes sociales -->
                     <div class="footer-social">
                         <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" class="social-btn social-fb" aria-label="Facebook">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
@@ -901,7 +881,6 @@
                     </div>
                 </div>
 
-                <!-- Columna links de navegacion -->
                 <div class="footer-col">
                     <h4>Explora</h4>
                     <ul>
@@ -912,7 +891,6 @@
                     </ul>
                 </div>
 
-                <!-- Columna contacto rapido -->
                 <div class="footer-col">
                     <h4>Contacto</h4>
                     <ul>
@@ -926,18 +904,17 @@
 
             <div class="footer-bottom">
                 <p>Más que un box, una comunidad.</p>
-                <p>&copy; 2026 Mashka Box Training Club</p>
+                <p>© 2026 Mashka Box Training Club</p>
             </div>
         </div>
     </footer>
 
-    <!-- Boton flotante de WhatsApp - siempre visible -->
     <a href="https://wa.me/593983421877?text=Hola%20Mashka%20Box%2C%20me%20interesa%20saber%20m%C3%A1s" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="WhatsApp">
         <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
         </svg>
     </a>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
